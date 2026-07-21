@@ -3,6 +3,23 @@
 #判断是否符合格式
 #如果不符重新提问日期
 #符合即转化为年月日用连字符链接，2位小数在补0
+months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+            ]
+
+
+
 while True:
     try:
         revise = input('Date: ')
@@ -11,16 +28,20 @@ while True:
 
         x = int(x)
         y = int(y)
-        
     except ValueError:
         pass
-    try:
-        revise = revise.replace(',',' ')
-        x,y,z = revise.split(',')
-    except ValueError:
-        continue
+        try:
+            revise = revise.replace(',',' ')
+            x,y,z = revise.split()
+            x = months.index(x) + 1
+            y = int(y)
+        except ValueError:
+            continue
+
+        if not 0 < y <= 31:
+            continue
     
-    if not 0 < x < 12 or not 0 < y < 31 :
+    if not 0 < x <= 12 or not 0 < y <= 31 :
         continue
     else:
         break

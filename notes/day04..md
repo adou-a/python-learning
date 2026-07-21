@@ -63,3 +63,18 @@ names.append(想要加入的)
 
 dicitionary {}
 关键有key  有value
+
+
+index
+months = []
+months.index(month)
+查找month在index上的位置
+
+split()
+按空格切 不看空格数量
+
+
+字符串自动补0
+print（f‘{number：02}’）
+0 表示不足的地方用0补齐
+2表示总宽度至少为2
