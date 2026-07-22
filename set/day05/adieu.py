@@ -1,0 +1,19 @@
+import inflect
+
+
+names = []
+
+while True:
+    try:
+
+        name = input('Name: ')
+        names.append(name)
+    except EOFError:
+        break
+
+P = inflect.engine()
+P = P.join(names)
+
+
+
+print(f'Adieu,adue,to,{P}')
